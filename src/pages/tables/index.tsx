@@ -1,29 +1,15 @@
-/*!
-=========================================================
-* Muse Ant Design Dashboard - v1.0.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-* Coded by Creative Tim
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import {
   Row,
   Col,
   Card,
   Radio,
   Table,
-  Upload,
   message,
   Progress,
   Button,
   Avatar,
   Typography,
 } from "antd";
-
-import { ToTopOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 // Images
@@ -548,42 +534,6 @@ const dataproject = [
       </>
     ),
   },
-
-  {
-    key: "6",
-    name: (
-      <>
-        <Avatar.Group>
-          <Avatar className="shape-avatar" src={ava6} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Redesign Online Store</Title>
-          </div>
-        </Avatar.Group>
-      </>
-    ),
-    age: (
-      <>
-        <div className="semibold">$2,000</div>
-      </>
-    ),
-    address: (
-      <>
-        <div className="text-sm">canceled</div>
-      </>
-    ),
-    completion: (
-      <>
-        <div className="ant-progress-project">
-          <Progress percent={0} size="small" />
-          <span>
-            <Link to="/">
-              <img src={pencil} alt="" />
-            </Link>
-          </span>
-        </div>
-      </>
-    ),
-  },
 ];
 
 function Tables() {
@@ -638,17 +588,6 @@ function Tables() {
                   pagination={false}
                   className="ant-border-space"
                 />
-              </div>
-              <div className="uploadfile pb-15 shadow-none">
-                <Upload {...formProps}>
-                  <Button
-                    type="dashed"
-                    className="ant-full-box"
-                    icon={<ToTopOutlined />}
-                  >
-                    Click to Upload
-                  </Button>
-                </Upload>
               </div>
             </Card>
           </Col>

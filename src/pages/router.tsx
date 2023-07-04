@@ -1,20 +1,20 @@
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom';
 import Layout from '@/components/layout';
 import Dashboard from './dashboard';
-import Login from './login';
-import Register from './register';
+import Signin from './signin';
+import Signup from './signup';
 import Billing from './billing';
 import Tables from './tables';
 import Profile from './profile';
 
 const router = createBrowserRouter([
 	{
-		path: "/login",
-		element: <Login />,
+		path: "/signin",
+		element: <Signin />,
 	},
 	{
-		path: "/register",
-		element: <Register />,
+		path: "/signup",
+		element: <Signup />,
 	},
 	{
 		path: "/",

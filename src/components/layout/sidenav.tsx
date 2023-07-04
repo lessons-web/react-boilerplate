@@ -1,19 +1,6 @@
-/*!
-  =========================================================
-  * Muse Ant Design Dashboard - v1.0.0
-  =========================================================
-  * Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-  * Copyright 2021 Creative Tim (https://www.creative-tim.com)
-  * Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-  * Coded by Creative Tim
-  =========================================================
-  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// import { useState } from "react";
 import { Menu, Button } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "@/assets/images/logo.png";
 
 function Sidenav({ color }: any) {
   const { pathname } = useLocation();
@@ -145,12 +132,12 @@ function Sidenav({ color }: any) {
   return (
     <>
       <div className="brand">
-        <img src={logo} alt="" />
-        <span>Muse Dashboard</span>
+        <img src={logo} alt="logo" />
+        <span>RBT React Boilerplate</span>
       </div>
       <hr />
       <Menu theme="light" mode="inline">
-        <Menu.Item key="1">
+        <Menu.Item key="dashboard">
           <NavLink to="/dashboard">
             <span
               className="icon"
@@ -163,7 +150,7 @@ function Sidenav({ color }: any) {
             <span className="label">Dashboard</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="tables">
           <NavLink to="/tables">
             <span
               className="icon"
@@ -176,7 +163,7 @@ function Sidenav({ color }: any) {
             <span className="label">Tables</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="3">
+        <Menu.Item key="billing">
           <NavLink to="/billing">
             <span
               className="icon"
@@ -192,7 +179,7 @@ function Sidenav({ color }: any) {
         <Menu.Item className="menu-item-header" key="5">
           Account Pages
         </Menu.Item>
-        <Menu.Item key="6">
+        <Menu.Item key="profile">
           <NavLink to="/profile">
             <span
               className="icon"
@@ -205,14 +192,14 @@ function Sidenav({ color }: any) {
             <span className="label">Profile</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="7">
-          <NavLink to="/login">
+        <Menu.Item key="signin">
+          <NavLink to="/signin">
             <span className="icon">{signin}</span>
             <span className="label">Sign In</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="8">
-          <NavLink to="/register">
+        <Menu.Item key="signup">
+          <NavLink to="/signup">
             <span className="icon">{signup}</span>
             <span className="label">Sign Up</span>
           </NavLink>
@@ -230,7 +217,7 @@ function Sidenav({ color }: any) {
           </span>
           <h6>Need Help?</h6>
           <p>Please check our docs</p>
-          <Button type="primary" className="ant-btn-sm ant-btn-block">
+          <Button type="primary" style={{ width: '100%' }}>
             DOCUMENTATION
           </Button>
         </div>

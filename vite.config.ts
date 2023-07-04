@@ -13,6 +13,7 @@ export default defineConfig({
       "components": path.resolve(__dirname, "src/components"),
       "utils": path.resolve(__dirname, "src/utils"),
       "pages": path.resolve(__dirname, "src/pages"),
+      "stores": path.resolve(__dirname, "src/stores"),
     },
   },
   plugins: [react()],
