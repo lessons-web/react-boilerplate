@@ -1,14 +1,3 @@
-/*!
-  =========================================================
-  * Muse Ant Design Dashboard - v1.0.0
-  =========================================================
-  * Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-  * Copyright 2021 Creative Tim (https://www.creative-tim.com)
-  * Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-  * Coded by Creative Tim
-  =========================================================
-  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import { useState } from "react";
 
 import {
@@ -28,6 +17,7 @@ import {
   ToTopOutlined,
   MenuUnfoldOutlined,
   RightOutlined,
+  SmileOutlined,
 } from "@ant-design/icons";
 import Paragraph from "antd/lib/typography/Paragraph";
 
@@ -50,8 +40,6 @@ function Dashboard() {
   const { Title, Text } = Typography;
 
   const onChange = (e: any) => console.log(`radio checked:${e.target.value}`);
-
-  const [reverse, setReverse] = useState(false);
 
   const dollor = [
     <svg
@@ -467,22 +455,61 @@ function Dashboard() {
                 <Timeline
                   pending="Recording..."
                   className="timelinelist"
-                  reverse={reverse}
-                >
-                  {timelineList.map((t, index) => (
-                    <Timeline.Item color={t.color} key={index}>
-                      <Title level={5}>{t.title}</Title>
-                      <Text>{t.time}</Text>
-                    </Timeline.Item>
-                  ))}
-                </Timeline>
-                <Button
-                  type="primary"
-                  className="width-100"
-                  onClick={() => setReverse(!reverse)}
-                >
-                  {<MenuUnfoldOutlined />} REVERSE
-                </Button>
+                  items={[
+                    {
+                      color: 'green',
+                      children: 'Create a services site 2015-09-01',
+                    },
+                    {
+                      color: 'green',
+                      children: 'Create a services site 2015-09-01',
+                    },
+                    {
+                      color: 'red',
+                      children: (
+                        <>
+                          <p>Solve initial network problems 1</p>
+                          <p>Solve initial network problems 2</p>
+                          <p>Solve initial network problems 3 2015-09-01</p>
+                        </>
+                      ),
+                    },
+                    {
+                      children: (
+                        <>
+                          <p>Technical testing 1</p>
+                          <p>Technical testing 2</p>
+                          <p>Technical testing 3 2015-09-01</p>
+                        </>
+                      ),
+                    },
+                    {
+                      color: 'gray',
+                      children: (
+                        <>
+                          <p>Technical testing 1</p>
+                          <p>Technical testing 2</p>
+                          <p>Technical testing 3 2015-09-01</p>
+                        </>
+                      ),
+                    },
+                    {
+                      color: 'gray',
+                      children: (
+                        <>
+                          <p>Technical testing 1</p>
+                          <p>Technical testing 2</p>
+                          <p>Technical testing 3 2015-09-01</p>
+                        </>
+                      ),
+                    },
+                    {
+                      color: '#00CCFF',
+                      dot: <SmileOutlined />,
+                      children: <p>Custom color testing</p>,
+                    },
+                  ]}
+                />
               </div>
             </Card>
           </Col>
@@ -503,7 +530,7 @@ function Dashboard() {
                   <div className="h-full col-content p-20">
                     <div className="ant-muse">
                       <Text>Built by developers</Text>
-                      <Title level={5}>Muse Dashboard for Ant Design</Title>
+                      <Title level={5}>RBT React Boilerplate for Ant Design</Title>
                       <Paragraph className="lastweek mb-36">
                         From colors, cards, typography to complex elements, you
                         will find the full documentation.

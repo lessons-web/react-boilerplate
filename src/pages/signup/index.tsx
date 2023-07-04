@@ -1,15 +1,4 @@
-/*!
-=========================================================
-* Muse Ant Design Dashboard - v1.0.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-* Coded by Creative Tim
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-import React, { Component } from "react";
+import { Component } from "react";
 import {
   Layout,
   Menu,
@@ -82,25 +71,6 @@ const profile = [
     ></path>
   </svg>,
 ];
-const signup = [
-  <svg
-    data-v-4ebdc598=""
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      data-v-4ebdc598=""
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M6 2C5.44772 2 5 2.44772 5 3V4H4C2.89543 4 2 4.89543 2 6V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V6C18 4.89543 17.1046 4 16 4H15V3C15 2.44772 14.5523 2 14 2C13.4477 2 13 2.44772 13 3V4H7V3C7 2.44772 6.55228 2 6 2ZM6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H14C14.5523 9 15 8.55228 15 8C15 7.44772 14.5523 7 14 7H6Z"
-      fill="#111827"
-      className="fill-muted"
-    ></path>
-  </svg>,
-];
 const signin = [
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +84,7 @@ const signin = [
     />
   </svg>,
 ];
-export default class Register extends Component {
+export default class Signup extends Component {
   render() {
     const onFinish = (values: any) => {
       console.log("Success:", values);
@@ -128,32 +98,26 @@ export default class Register extends Component {
         <div className="layout-default ant-layout layout-sign-up">
           <Header>
             <div className="header-col header-brand">
-              <h5>Muse Dashboard</h5>
+              <h2>RBT React Boilerplate</h2>
             </div>
             <div className="header-col header-nav">
               <Menu mode="horizontal" defaultSelectedKeys={["1"]}>
-                <Menu.Item key="1">
+                <Menu.Item key="dashboard">
                   <Link to="/dashboard">
                     {template}
-                    <span> Dashboard</span>
+                    <span>Dashboard</span>
                   </Link>
                 </Menu.Item>
-                <Menu.Item key="2">
+                <Menu.Item key="profile">
                   <Link to="/profile">
                     {profile}
                     <span>Profile</span>
                   </Link>
                 </Menu.Item>
-                <Menu.Item key="3">
-                  <Link to="/sign-up">
-                    {signup}
-                    <span> Sign Up</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="4">
-                  <Link to="/sign-in">
+                <Menu.Item key="signin">
+                  <Link to="/signin">
                     {signin}
-                    <span> Sign In</span>
+                    <span>Sign In</span>
                   </Link>
                 </Menu.Item>
               </Menu>
@@ -167,16 +131,12 @@ export default class Register extends Component {
             <div className="sign-up-header">
               <div className="content">
                 <Title>Sign Up</Title>
-                <p className="text-lg">
-                  Use these awesome forms to login or create new account in your
-                  project for free.
-                </p>
               </div>
             </div>
 
             <Card
               className="card-signup header-solid h-full ant-card pt-0"
-              title={<h5>Register With</h5>}
+              title={<h5>Signup With</h5>}
             >
               <div className="sign-up-gateways">
                 <Button>
@@ -243,7 +203,7 @@ export default class Register extends Component {
               </Form>
               <p className="font-semibold text-muted text-center">
                 Already have an account?{" "}
-                <Link to="/sign-in" className="font-bold text-dark">
+                <Link to="/signin" className="font-bold text-dark">
                   Sign In
                 </Link>
               </p>
@@ -284,10 +244,6 @@ export default class Register extends Component {
                 <Link to="#">{<GithubOutlined />}</Link>
               </Menu.Item>
             </Menu>
-            <p className="copyright">
-              {" "}
-              Copyright © 2021 Muse by <a href="#pablo">Creative Tim</a>.{" "}
-            </p>
           </Footer>
         </div>
       </>

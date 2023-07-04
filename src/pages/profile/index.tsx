@@ -1,14 +1,3 @@
-/*!
-  =========================================================
-  * Muse Ant Design Dashboard - v1.0.0
-  =========================================================
-  * Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-  * Copyright 2021 Creative Tim (https://www.creative-tim.com)
-  * Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-  * Coded by Creative Tim
-  =========================================================
-  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import { useState } from "react";
 
 import {
@@ -32,7 +21,7 @@ import {
   VerticalAlignTopOutlined,
 } from "@ant-design/icons";
 
-import BgProfile from "@/assets/images/bg-profile.jpg";
+import BgProfile from "@/assets/images/bg-profile.png";
 import profilavatar from "@/assets/images/face-1.jpg";
 import convesionImg from "@/assets/images/face-3.jpg";
 import convesionImg2 from "@/assets/images/face-4.jpg";
@@ -42,6 +31,7 @@ import convesionImg5 from "@/assets/images/face-2.jpg";
 import project1 from "@/assets/images/home-decor-1.jpeg";
 import project2 from "@/assets/images/home-decor-2.jpeg";
 import project3 from "@/assets/images/home-decor-3.jpeg";
+
 
 function Profile() {
   const [imageURL, setImageURL] = useState<string>();
@@ -171,7 +161,7 @@ function Profile() {
           <Row justify="space-between" align="middle" gutter={[24, 0]}>
             <Col span={24} md={12} className="col-info">
               <Avatar.Group>
-                <Avatar size={74} shape="square" src={profilavatar} />
+                <Avatar size={60} shape="square" src={profilavatar} />
 
                 <div className="avatar-info">
                   <h4 className="font-semibold m-0">Sarah Jacob</h4>

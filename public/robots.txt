@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /signin/
+Disallow: /signup/
+Sitemap: https://react-boilerplate.vercel.com/dashboard
