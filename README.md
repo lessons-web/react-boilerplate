@@ -2,6 +2,24 @@
 
 A basic react admin boilerplate with `react`、`react-router-dom`、`ant-design`、`valtio`、 and `apexcharts`.
 
+## Get Started
+
+```bash
+# npm
+npm install
+npm run start
+
+# yarn
+yarn install
+yarn start
+```
+
+> Note: You need to run two commands before starting development to ensure that the commitlint specification runs properly.
+> 
+> `npm run prepare` or `yarn prepare`
+> `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'`
+
+
 ## Directory
 
 ```
@@ -41,3 +59,11 @@ RBT React Boilerplate
     │   ├── .env                        // ENV file
     └── └── README.md
 ```
+
+## DEV
+
+More detail can see the [DEVDOC](./DEVDOC.md).
+
+## Feature
+
+    - Common Login / Auth module.
