@@ -16,9 +16,9 @@ yarn start
 
 > Note: You need to run two commands before starting development to ensure that the commitlint specification runs properly.
 > 
-> `npm run prepare` or `yarn prepare`
-> `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'`
-
+> 1. `npm run prepare` or `yarn prepare`
+>
+> 2. `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'`
 
 ## Directory
 
