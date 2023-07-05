@@ -14,6 +14,7 @@ module.exports = {
     // TypeScript Rules
     '@typescript-eslint/ban-ts-comment': 'off',
     // JavaScript Rules
+    'semi': ['warn', 'always'],
     'no-console': 'warn',
     'no-undef': 'off',
   },
